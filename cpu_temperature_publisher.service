@@ -1,0 +1,12 @@
+#/etc/systemd/system
+[Unit]
+Description=CPU Temperature Publisher Service
+After=network.target
+
+[Service]
+User=USER
+ExecStart=/usr/bin/python3 /home/USER/scripts/cpu_temperatur_publisher1.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
